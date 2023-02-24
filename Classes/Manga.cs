@@ -8,26 +8,22 @@ namespace MangaView.Classes
 {
     public class Manga
     {
-        private readonly int id;
-        private readonly string name = "Undefined";
-        public readonly string indexer = "aaa";
+        public int Id { get; private set; }
+        public string Name { get; private set; }
+
         public Manga(int id)
         {
-            this.id = id;
+            Id = id;
         }
 
-        public Manga(int id,string name)
+        public Manga(int id, string name)
         {
-            this.id = id;
-            this.name = name;
-        }
-        public string GetName()
-        {
-            return this.name;
+            this.Id = id;
+            this.Name = name;
         }
         public int GetId()
         {
-            return this.id;
+            return this.Id;
         }
     }
 }

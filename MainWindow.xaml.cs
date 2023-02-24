@@ -33,7 +33,7 @@ namespace MangaView
             for (int i = 0; i <= 4; i++)
             {
                 this.NewMangaArr.Add(new Manga(i, "one Piece-" + i));
-                Trace.WriteLine(this.NewMangaArr[i].GetName());
+                Trace.WriteLine(this.NewMangaArr[i].Name);
             }
             DataContext = this;
 

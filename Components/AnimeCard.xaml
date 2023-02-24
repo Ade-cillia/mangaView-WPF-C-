@@ -29,7 +29,7 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <Image Grid.Row="0" Grid.ColumnSpan="3"  Source="https://www.glenat.com/sites/default/files/styles/couv_livre/public/images/livres/couv/9782344044698-001-T.jpeg?itok=VITaz630" Stretch="Fill"/>
-                            <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Manga}"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Manga.Name}"></TextBlock>
                             <Button Grid.Row="2" Grid.Column="1" Padding="20,5" Margin="10" Background="#f0a6ca" BorderThickness="0" >
                                 Voir Plus
                                 <Button.Resources>
