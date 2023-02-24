@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="MangaView.Components.AnimeCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MangaView.Components"
+             xmlns:components="clr-namespace:MangaView.Components"
+             xmlns:classes="clr-namespace:MangaView.Classes"
+             mc:Ignorable="d" d:DesignWidth="174" Height="Auto" MaxWidth="150"
+             d:DataContext="{d:DesignInstance classes:Manga}"
+             >
+    <UserControl.ContentTemplate>
+        <DataTemplate>
+            <Grid>
+                <Border Background="#eeeeee" Grid.Row="0">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="2" BlurRadius="10" Opacity="0.5"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="150" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Grid.ColumnSpan="3"  Source="https://www.glenat.com/sites/default/files/styles/couv_livre/public/images/livres/couv/9782344044698-001-T.jpeg?itok=VITaz630" Stretch="Fill"/>
+                            <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Manga}"></TextBlock>
+                            <Button Grid.Row="2" Grid.Column="1" Padding="20,5" Margin="10" Background="#f0a6ca" BorderThickness="0" >
+                                Voir Plus
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"></Setter>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <ContentPresenter Grid.Row="1" Margin="20" Content="{TemplateBinding Content}" />
+            </Grid>
+        </DataTemplate>
+    </UserControl.ContentTemplate>
+</UserControl>
